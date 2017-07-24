@@ -9,6 +9,6 @@ script:
 after_success:
   - docker build -t ykhadilkar/rei-hello-world-spring-boot-docker:latest .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    clear;
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push ykhadilkar/rei-hello-world-spring-boot-docker:latest;
     fi
