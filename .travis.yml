@@ -4,11 +4,10 @@ jdk:
 - oraclejdk8
 services:
   - docker
-before_install:
-  - docker build -t ykhadilkar/rei-hello-world-spring-boot-docker .
 script:
 - test/run.sh
 after_success:
+  - docker build -t ykhadilkar/rei-hello-world-spring-boot-docker .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push ykhadilkar/rei-hello-world-spring-boot-docker;
