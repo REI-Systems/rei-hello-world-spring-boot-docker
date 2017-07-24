@@ -7,8 +7,8 @@ services:
 script:
 - test/run.sh
 after_success:
-  - docker build -t ykhadilkar/rei-hello-world-spring-boot-docker .
+  - docker build -t ykhadilkar/rei-hello-world-spring-boot-docker:latest .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push ykhadilkar/rei-hello-world-spring-boot-docker;
+    clear;
+    docker push ykhadilkar/rei-hello-world-spring-boot-docker:latest;
     fi
