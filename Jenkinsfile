@@ -46,7 +46,7 @@ node {
         }
     }
 
-    stage(''Deploy Image){
+    stage('Deploy Image'){
         /* Deploy docker image from docker hub*/
         sh 'docker pull ykhadilkar/rei-hello-world-spring-boot-docker:latest'
         sh 'docker run ykhadilkar/rei-hello-world-spring-boot-docker:latest'
