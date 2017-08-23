@@ -16,7 +16,7 @@ node {
     stage('Build Jar') {
         /* Build JAR file */
 
-        sh 'mvn clean install'
+        sh 'mvn -B -V -U -e clean install'
     }
 
     stage('Build image') {
@@ -27,8 +27,7 @@ node {
     }
 
     stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
+        /* Ideally, we would run a test framework against our image.*/
 
         app.inside {
             sh 'echo "Tests passed"'
