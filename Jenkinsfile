@@ -14,7 +14,7 @@ node {
         checkout scm
     }
 
-    stage('Build Jar') {
+    stage('Build and Unit test') {
         /* Build JAR file */
 
         sh 'mvn clean install cobertura:cobertura -Dcobertura.report.format=xml'
