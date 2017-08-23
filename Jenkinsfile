@@ -24,7 +24,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("reisystems/helloworld")
+        app = docker.build("ykhadilkar/rei-hello-world-spring-boot-docker")
     }
 
     stage('Test image') {
