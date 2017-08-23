@@ -49,6 +49,6 @@ node {
     stage('Deploy Image'){
         /* Deploy docker image from docker hub*/
         sh 'docker pull ykhadilkar/rei-hello-world-spring-boot-docker:latest'
-        sh 'docker run -p IP:8080:8080 -d --restart=always ykhadilkar/rei-hello-world-spring-boot-docker:latest'
+        sh 'docker run -p IP:127.0.0.1:8080:8080 -d --restart=always ykhadilkar/rei-hello-world-spring-boot-docker:latest'
     }
 }
