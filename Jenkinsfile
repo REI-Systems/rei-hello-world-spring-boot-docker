@@ -1,6 +1,12 @@
 node {
     def app
 
+    stage('Configure') {
+        env.PATH = "${tool 'maven-3.5'}/bin:${env.PATH}"
+        version = '1.0.' + env.BUILD_NUMBER
+        currentBuild.displayName = version
+    }
+
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
