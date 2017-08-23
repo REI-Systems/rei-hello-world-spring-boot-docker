@@ -7,6 +7,12 @@ node {
         checkout scm
     }
 
+    stage('Build Jar') {
+        /* Build JAR file */
+
+        mvn clean install cobertura:cobertura -Dcobertura.report.format=xml
+    }
+
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
