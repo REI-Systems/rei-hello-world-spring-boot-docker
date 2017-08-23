@@ -16,7 +16,7 @@ node {
     stage('Build Jar') {
         /* Build JAR file */
 
-        sh 'mvn clean install cobertura:cobertura -Dcobertura.report.format=xml'
+        sh 'mvn clean install'
     }
 
     stage('Build image') {
