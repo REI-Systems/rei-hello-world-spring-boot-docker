@@ -16,7 +16,7 @@ node {
     stage('Build Jar') {
         /* Build JAR file */
 
-        sh 'mvn -B -V -U -e clean install'
+        sh 'mvn  -B -V -U -e clean install cobertura:cobertura -Dcobertura.report.format=xml'
     }
 
     stage('Build image') {
@@ -27,7 +27,7 @@ node {
     }
 
     stage('Test image') {
-        /* Ideally, we would run a test framework against our image.*/
+        /* Ideally, we would run a test framework against our image. */
 
         app.inside {
             sh 'echo "Tests passed"'
