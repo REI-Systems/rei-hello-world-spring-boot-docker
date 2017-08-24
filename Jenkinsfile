@@ -49,6 +49,7 @@ node {
     stage('Deploy Image'){
         /* Deploy docker image from docker hub*/
         sh 'docker pull ykhadilkar/rei-hello-world-spring-boot-docker:latest'
+        sh 'docker stop ykhadilkar/rei-hello-world-spring-boot-docker:latest || true && docker rm ykhadilkar/rei-hello-world-spring-boot-docker:latest || true'
         sh 'docker run -p 8080:8080 -d --restart=always ykhadilkar/rei-hello-world-spring-boot-docker:latest'
     }
 }
