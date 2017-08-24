@@ -8,4 +8,5 @@
 * Immutable docker image fetched and deployed by Jenkins 
 * All hosted on EC2
 
-![](https://github.com/REI-Systems/rei-hello-world-spring-boot-docker/blob/master/docs/hello-world-cicd.png | width=100)
+### Component Diagram
+<img src="https://github.com/REI-Systems/rei-hello-world-spring-boot-docker/blob/master/docs/hello-world-cicd.png" height="600">
