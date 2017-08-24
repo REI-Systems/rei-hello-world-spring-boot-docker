@@ -9,4 +9,3 @@
 * All hosted on EC2
 
 ![Architecture](https://github.com/REI-Systems/rei-hello-world-spring-boot-docker/blob/master/docs/hello-world-cicd.png)
-
