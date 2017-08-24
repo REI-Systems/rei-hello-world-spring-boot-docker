@@ -7,5 +7,5 @@
 * Docker images stored in Docker registry
 * Immutable docker image fetched and deployed by Jenkins 
 * All hosted on EC2
- 
-![Image of arch](https://github.com/REI-Systems/rei-hello-world-spring-boot-docker/docs/hello-world-cicd.png)
+
+![Architecture](https://github.com/REI-Systems/rei-hello-world-spring-boot-docker/blob/master/docs/hello-world-cicd.png)
